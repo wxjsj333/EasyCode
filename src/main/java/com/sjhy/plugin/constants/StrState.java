@@ -17,6 +17,10 @@ public class StrState {
      * 类型映射
      */
     public static final String TYPE_MAPPER = "typeMapper";
+    /**
+     * 服务模块
+     */
+    public static final String SERVICE_MODULE = "serviceModule";
 
     /**
      * 全局配置

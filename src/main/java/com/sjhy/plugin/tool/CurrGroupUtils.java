@@ -3,6 +3,7 @@ package com.sjhy.plugin.tool;
 import com.sjhy.plugin.config.Settings;
 import com.sjhy.plugin.entity.ColumnConfigGroup;
 import com.sjhy.plugin.entity.GlobalConfigGroup;
+import com.sjhy.plugin.entity.ServiceModuleGroup;
 import com.sjhy.plugin.entity.TemplateGroup;
 import com.sjhy.plugin.entity.TypeMapperGroup;
 
@@ -86,6 +87,28 @@ public final class CurrGroupUtils {
         typeMapperGroup.setName(groupName);
         Settings.getInstance().getTypeMapperGroupMap().put(groupName, typeMapperGroup);
     }
+
+  /**
+   * 获取当前服务模块组对象
+   *
+   * @return 服务模块组对象
+   */
+  public static ServiceModuleGroup getCurrServiceModuleGroup() {
+    Settings settings = Settings.getInstance();
+    String groupName = settings.getCurrServiceModuleGroupName();
+    return settings.getServiceModuleGroupMap().get(groupName);
+  }
+
+  /**
+   * 覆盖或添加服务模块射组
+   *
+   * @param groupName         组名
+   * @param serviceModuleGroup 服务模块组
+   */
+  public static void setServiceModuleGroup(String groupName, ServiceModuleGroup serviceModuleGroup) {
+    serviceModuleGroup.setName(groupName);
+    Settings.getInstance().getServiceModuleGroupMap().put(groupName, serviceModuleGroup);
+  }
 
     /**
      * 获取当前列配置组对象

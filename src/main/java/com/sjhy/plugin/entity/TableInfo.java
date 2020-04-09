@@ -15,41 +15,46 @@ import java.util.List;
  */
 @Data
 public class TableInfo {
-    /**
-     * 原始对象
-     */
-    @JsonIgnore
-    private DbTable obj;
-    /**
-     * 表名（首字母大写）
-     */
-    private String name;
-    /**
-     * 注释
-     */
-    private String comment;
-    /**
-     * 所有列
-     */
-    private List<ColumnInfo> fullColumn;
-    /**
-     * 主键列
-     */
-    private List<ColumnInfo> pkColumn;
-    /**
-     * 其他列
-     */
-    private List<ColumnInfo> otherColumn;
-    /**
-     * 保存的包名称
-     */
-    private String savePackageName;
-    /**
-     * 保存路径
-     */
-    private String savePath;
-    /**
-     * 保存的model名称
-     */
-    private String saveModelName;
+
+  /**
+   * 原始对象
+   */
+  @JsonIgnore
+  private DbTable obj;
+  /**
+   * 表名（首字母大写）
+   */
+  private String name;
+  /**
+   * 注释
+   */
+  private String comment;
+  /**
+   * 所有列
+   */
+  private List<ColumnInfo> fullColumn;
+  /**
+   * 主键列
+   */
+  private List<ColumnInfo> pkColumn;
+  /**
+   * 其他列
+   */
+  private List<ColumnInfo> otherColumn;
+  /**
+   * 保存的包名称
+   */
+  private String savePackageName;
+  /**
+   * 保存路径
+   */
+  private String savePath;
+  /**
+   * 保存的model名称
+   */
+  private String saveModelName;
+  /**
+   * 保存的服务模块
+   */
+  private String serviceModuleName;
 }

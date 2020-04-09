@@ -144,6 +144,7 @@ public class TableInfoServiceImpl implements TableInfoService {
         // 开始合并数据
         // 选择模型名称
         tableInfo.setSaveModelName(tableInfoConfig.getSaveModelName());
+        tableInfo.setServiceModuleName(tableInfoConfig.getServiceModuleName());
         // 选择的包名
         tableInfo.setSavePackageName(tableInfoConfig.getSavePackageName());
         // 选择的保存路径
