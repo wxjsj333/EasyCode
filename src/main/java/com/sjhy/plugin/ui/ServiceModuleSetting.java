@@ -12,14 +12,11 @@ import com.sjhy.plugin.entity.ServiceModuleGroup;
 import com.sjhy.plugin.entity.ServiceModuleModel;
 import com.sjhy.plugin.tool.CloneUtils;
 import com.sjhy.plugin.tool.StringUtils;
-import java.util.Map;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
-import javax.swing.JPanel;
-import javax.swing.JTable;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.Nullable;
+
+import javax.swing.*;
+import java.util.Map;
 
 /**
  * @author wangXin
@@ -224,9 +221,5 @@ public class ServiceModuleSetting implements Configurable {
         });
     this.currGroupName = settings.getCurrServiceModuleGroupName();
     init();
-  }
-
-  private void createUIComponents() {
-    // TODO: place custom component creation code here
   }
 }
