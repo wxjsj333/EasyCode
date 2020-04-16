@@ -76,6 +76,7 @@ public class CodeGenerateServiceImpl implements CodeGenerateService {
         tableInfoList.forEach(tableInfo -> {
             if (StringUtils.isEmpty(tableInfo.getSavePath())) {
                 tableInfo.setSaveModelName(selectedTableInfo.getSaveModelName());
+                tableInfo.setServiceModuleName(selectedTableInfo.getServiceModuleName());
                 tableInfo.setSavePackageName(selectedTableInfo.getSavePackageName());
                 tableInfo.setSavePath(selectedTableInfo.getSavePath());
                 tableInfoService.save(tableInfo);
@@ -85,6 +86,7 @@ public class CodeGenerateServiceImpl implements CodeGenerateService {
         if (unifiedConfig) {
             tableInfoList.forEach(tableInfo -> {
                 tableInfo.setSaveModelName(selectedTableInfo.getSaveModelName());
+                tableInfo.setServiceModuleName(selectedTableInfo.getServiceModuleName());
                 tableInfo.setSavePackageName(selectedTableInfo.getSavePackageName());
                 tableInfo.setSavePath(selectedTableInfo.getSavePath());
             });
